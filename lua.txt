@@ -1,0 +1,224 @@
+
+1.print(10 .. 20)    -->1020
+	..在 Lua 中是字符串连接符，当在一个数字后面写..时，必须加上空格以防止被解释错
+	
+2.[[....]]表示字符串
+
+3.lua中的特殊类型nil，；一个全局变量没有被赋值以前默认值为 nil，给全局变量负 nil 可以删除该变量。
+
+4.lua中所有的值都可以作为条件，在控制结构的条件中除了false和nil，其他的值都为真(0也是true)。
+
+5.lua的八种基本类型 nil,boolean,number,string,userdata,function,thread,table.
+	函数type可以测试给定变量或者值得类型
+	
+6.tonumber(),tostring()
+	10 == "10" 返回永远为nil
+	
+7. !=  ->  ~=   不等于
+
+8.表结构第一个元素索引为1
+
+
+
+范型 for 循环
+
+
+
+
+
+实用sublime快捷操作
+Ctrl+L 选择整行（按住-继续选择下行）
+Ctrl+KK 从光标处删除至行尾
+Ctrl+K Backspace 从光标处删除至行首
+Ctrl+J 合并行（已选择需要合并的多行时）
+Ctrl+KU 改为大写
+Ctrl+KL 改为小写
+Ctrl+D 选择字符串 （按住-继续选择下个相同的字符串）
+Ctrl+M 光标移动至括号内开始或结束的位置
+Ctrl+/ 注释整行（如已选择内容，同“Ctrl+Shift+/”效果）
+Ctrl+Shift+c转换为utf8
+Ctrl+R 搜索指定文件的函数标签
+Ctrl+G 跳转到指定行
+Ctrl+KT 折叠属性
+Ctrl+K0 展开所有
+Ctrl+U 软撤销
+Ctrl+T 词互换
+Tab 缩进 自动完成
+Shift+Tab 去除缩进
+Ctrl+Enter 光标后插入行
+Ctrl+F2 设置书签
+F2 下一个书签
+Shift+F2 上一个书签
+shift+鼠标右键 列选择
+Alt+F3 选中文本按下快捷键，即可一次性选择全部的相同文本进行同时编辑
+Alt+. 闭合当前标签
+F6 检测语法错误
+F9 行排序(按a-z)
+F11 全屏模式
+Ctrl+Shift+Enter 光标前插入行
+Ctrl+Shift+[ 折叠代码
+Ctrl+Shift+] 展开代码
+Ctrl+Shift+↑ 与上行互换
+Ctrl+Shift+↓ 与下行互换
+Ctrl+Shift+A 选择光标位置父标签对儿
+Ctrl+Shift+D 复制光标所在整行，插入在该行之前
+ctrl+shift+F 在文件夹内查找，与普通编辑器不同的地方是sublime允许添加多个文件夹进行查找
+Ctrl+Shift+K 删除整行
+Ctrl+Shift+L 鼠标选中多行（按下快捷键），即可同时编辑这些行
+Ctrl+Shift+M 选择括号内的内容（按住-继续选择父括号）
+Ctrl+Shift+P 打开命令面板
+Ctrl+Shift+/ 注释已选择内容
+Ctrl+Shift+Enter 光标前插入行
+Ctrl+PageDown 、Ctrl+PageUp文件按开启的前后顺序切换
+Ctrl+鼠标左键 可以同时选择要编辑的多处文本
+Shift+鼠标右键（或使用鼠标中键）可以用鼠标进行竖向多行选择
+Shift+Tab 去除缩进
+Alt+Shift+1~9（非小键盘）屏幕显示相等数字的小窗口
+
+
+
+
+local sLoginScene="gamehall.1login.LoginScene"
+g_oSceneMgr:enterScene(sLoginScene,g_tConst.tSeceneEnum.GAME_SYS,false)
+
+
+
+
+
+
+
+
+
+	g_oViewMgr:loadMediator(g_tMediator.sLobby,self,true)
+	g_oSceneMgr:enterScene(sLoginScene,g_tConst.tSeceneEnum.GAME_SYS,false)
+	
+	Log.info("<Pandy> ****************** hall-init go-login")
+	dump(oTableModel,"0000000000000000000000000000000000000000000000")
+	Log.info("场次id=",nSceneId)
+
+	local oLobbyData = g_oDataMgr:getData(g_tData.sLobbyData)
+    local oTableData = g_oDataMgr:getData(g_tData.sTableData)
+	
+	local oLobbyData = g_oDataMgr:getData(g_tData.sTableData)
+
+
+	g_oPlatform:newBuyWithThirdParty(334,1,g_oPlatform:getUserId())
+    
+	self:bingMediator(g_tMediator.sLobbyGroup,display.getRunningScene(),true); -- 切换场景
+
+	Log.info(string.format("tips:%d,msg = %s",nActionId,sMsg))
+	
+	
+	
+	
+	g_oSceneDefineLoader.loadConstDefine(string.format("%s.gamehall.2lobby.ConstDefine",App.sCurrGameName),g_tConst.tSeceneEnum.GAME_SYS)
+    
+    g_oInterfaceMgr:getInterface(g_tInterface.ILobby):enterTable()
+	
+	g(global)
+	o(object)
+
+	self:callShowSysErrorMsg("连接服务器失败，网络异常或指定服务器暂不可用！")
+
+	g_oPlatform:doAction(4,"您的帐号在其它地方登录,请确保您的帐号安全.")
+	
+	
+	-- 商城
+    local function __onClickShop()
+        Log.info("点击商店 UserId = " ..g_oPlatform:getUserId())
+        --g_oPlatform:newBuyWithThirdParty(334,1,g_oPlatform:getUserId())
+        self:bingMediator(g_tMediator.sLobbyShop,display.getRunningScene(),true)
+    end
+    self.tNodeList['btn_shop']:addClickEventListener(__onClickShop)
+	
+	Log.info("<Pandy> ******************************* i = " ..i, " nType = " ..nType)
+
+
+
+
+	365you.nttasj.2200169810|yunos.qpdt.2200198678|huawei.ttasj.2200109612
+
+
+	local btn=ccs.seekNodeByName(oGroupItem,"btnClick")
+	local picStr=string.format("hnpdk/hall/Lobby/res/table_normal_%d.png",k-1)
+	btn:loadTextureNormal(picStr,ccui.TextureResType.localType)
+
+
+	g_oInterfaceMgr:getInterface(g_tInterface.ILobby)
+
+	
+	sLocalPath = string.format("%s%s",zengame.getWritablePath(),sLocalPath)
+	local picStr=string.format("hnpdk/hall/Lobby/res/table_normal_%d.png",k-1)
+	
+	img:loadTexture(filepath,ccui.TextureResType.localType)
+	
+	
+	g_oDataMgr:getData(g_tData.GameInfoSaveData):getHeadIndex(userInfo.UserId)
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    --触摸监听
+    local function onTouchBegan(touch, event)
+        local location = touch:getLocation()
+        Log.info("onTouchBegan:", location.x, location.y)
+        -- 获取触摸点的坐标
+        local oTouchPt = cc.p(location.x, location.y)
+
+        -- 下拉框返回
+        if self.btn_return:isvisible() then
+            self:downBtnBack()
+        end
+
+        return true
+    end
+
+    local function onTouchMoved(touch, event)
+        local location = touch:getLocation()
+        Log.info("onTouchMoved:", location.x, location.y)
+    end
+
+    local function onTouchEnded(touch, event)
+        local location = touch:getLocation()
+        Log.info("onTouchEnded:", location.x, location.y)
+        local oEndTouchPt = cc.p(location.x, location.y)
+    end
+
+    local function onTouchCanceled(touch, event)
+        local location = touch:getLocation()
+        Log.info("onTouchCanceled:", location.x, location.y)
+
+        onTouchEnded(touch, event)
+    end
+
+    -- 触摸处理
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    listener:registerScriptHandler(onTouchCanceled,cc.Handler.EVENT_TOUCH_CANCELLED )
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+
+
+
+	
+	
+	
+        if self:getJuniorByTag(g_tMediator.sLobbyGroup,g_tConst.tViewModelEnum.nMediator) then
+            --直接调用 deleteJunior 方法不能达到预期效果  所以获取次级MVC后调用close方法
+            --self:deleteJunior(g_tMediator.sLobbyGroup,g_tConst.tViewModelEnum.nMediator)
+            self:getJuniorByTag(g_tMediator.sLobbyGroup,g_tConst.tViewModelEnum.nMediator):close()
+        end
+
+
+
+
